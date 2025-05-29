@@ -485,6 +485,7 @@ svg * {
 @media (max-width: 991.98px) {
   .about .about__inner .about__row .about__column .about__card-icon {
     width: 48px;
+    font-size: 10px;
   }
 }
 @media (max-width: 991.98px) {
