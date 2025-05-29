@@ -404,7 +404,7 @@
 
 .contacts {
   padding: var(--section-padding-y);
-  background: var(--color-accent) url("/images/backgrounds/04-contacts.png")
+  background: var(--color-accent) url("../images/backgrounds/04-contacts.png")
     100% 100% / 12% no-repeat;
 
   @include tablets {

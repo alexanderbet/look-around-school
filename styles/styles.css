@@ -654,7 +654,7 @@ svg * {
 
 .contacts {
   padding: var(--section-padding-y);
-  background: var(--color-accent) url("/images/backgrounds/04-contacts.png") 100% 100%/12% no-repeat;
+  background: var(--color-accent) url("../images/backgrounds/04-contacts.png") 100% 100%/12% no-repeat;
 }
 @media (max-width: 991.98px) {
   .contacts {
