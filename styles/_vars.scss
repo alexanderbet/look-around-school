@@ -1,0 +1,19 @@
+@import "media";
+
+:root {
+   --color-dark: #2d3033;
+   --color-light: #f9fafb;
+   --color-accent: #1e293b;
+
+   --section-padding-y: 70px 0;
+
+   @include tablets {
+      --section-padding-y: 40px 0;
+   }
+
+   --font-family-base: "Carlito", sans-serif;
+   --font-family-fluid: "Lacquer", system-ui;
+
+   --swiper-navigation-color: #f9fafb;
+   --swiper-pagination-color: #f9fafb;
+}

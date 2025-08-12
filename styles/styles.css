@@ -108,21 +108,21 @@ legend {
 
 @font-face {
   font-family: "Carlito";
-  src: url("../fonts/Carlito-Regular.woff2") format("woff2");
+  src: url("../assets/fonts/Carlito-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Carlito";
-  src: url("../fonts/Carlito-Bold.woff2") format("woff2");
+  src: url("../assets/fonts/Carlito-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Lacquer";
-  src: url("../fonts/Lacquer-Regular.woff2") format("woff2");
+  src: url("../assets/fonts/Lacquer-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -171,8 +171,8 @@ svg * {
 .wrapper .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 10px;
-  max-width: 1220px;
+  padding: 0 15px;
+  max-width: 1230px;
 }
 .wrapper .title {
   font-size: 36px;
@@ -180,46 +180,43 @@ svg * {
   font-weight: 700;
   text-transform: uppercase;
 }
-.wrapper .burger__menu-button {
-  position: fixed;
-  right: 0;
+.wrapper .burger-btn {
+  display: none;
+  position: relative;
   z-index: 1;
   width: 40px;
   height: 40px;
-  margin-right: 15px;
-  display: none;
   transition: rotate 0.3s ease-in-out;
 }
 @media (max-width: 767.98px) {
-  .wrapper .burger__menu-button {
+  .wrapper .burger-btn {
     display: block;
   }
 }
-.wrapper .burger__menu-button._active-burger {
-  rotate: 45deg;
-  transition: rotate 0.3s ease-in-out;
-}
-.wrapper .burger__menu-button span {
+.wrapper .burger-btn span {
   position: absolute;
   left: 5px;
   top: 50%;
   width: 30px;
   height: 2px;
   background-color: var(--color-light);
+  transition: transform 0.3s ease-in-out;
 }
-.wrapper .burger__menu-button span:first-child {
+.wrapper .burger-btn span:first-child {
   transform: translateY(-10px);
 }
-.wrapper .burger__menu-button._active-burger span:first-child {
-  transform: rotate(90deg) translateY(0px);
-  transition: transform 0.3s ease-in-out;
-}
-.wrapper .burger__menu-button span:last-child {
+.wrapper .burger-btn span:last-child {
   transform: translateY(10px);
 }
-.wrapper .burger__menu-button._active-burger span:last-child {
+.wrapper .burger-btn._active-btn {
+  rotate: 45deg;
+  transition: rotate 0.3s ease-in-out;
+}
+.wrapper .burger-btn._active-btn span:first-child {
+  transform: rotate(90deg) translateY(0px);
+}
+.wrapper .burger-btn._active-btn span:last-child {
   transform: translateY(0px);
-  transition: transform 0.3s ease-in-out;
 }
 .wrapper .swiper {
   width: 800px;
@@ -241,8 +238,7 @@ svg * {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (max-width: 767.98px) {
   .wrapper .swiper :is(.swiper-button-prev, .swiper-button-next)::after {
@@ -258,8 +254,7 @@ svg * {
   top: 0;
   left: 0;
   z-index: 100;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   background-color: rgba(30, 41, 59, 0.8);
 }
 @media (max-width: 991.98px) {
@@ -294,15 +289,14 @@ svg * {
     background-color: var(--color-accent);
     transition: transform 0.5s ease-in-out;
   }
-  .header .header__inner .header__menu._open-menu {
+  .header .header__inner .header__menu._menu-open {
     transform: translateY(100%);
   }
 }
 .header .header__inner .header__menu .header__menu-list {
   display: flex;
   align-items: center;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
+  column-gap: 40px;
   flex-wrap: wrap;
 }
 @media (max-width: 767.98px) {
@@ -315,8 +309,7 @@ svg * {
 }
 @media (max-width: 991.98px) {
   .header .header__inner .header__menu .header__menu-list {
-    -moz-column-gap: 30px;
-         column-gap: 30px;
+    column-gap: 30px;
   }
 }
 .header .header__inner .header__menu .header__menu-list .header__menu-item .header__menu-link {
@@ -340,11 +333,11 @@ svg * {
 
 .intro {
   width: 100%;
-  height: calc(100vh + 100px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: var(--color-accent) url("../images/bg-image.jpg") center/cover no-repeat;
+  background: var(--color-accent) url("../assets/images/bg-image.jpg") center/cover no-repeat;
 }
 @media (max-width: 575.98px) {
   .intro {
@@ -370,7 +363,7 @@ svg * {
 }
 @media (max-width: 575.98px) {
   .intro .intro__inner .intro__title {
-    font-size: 64px;
+    font-size: 60px;
   }
 }
 .intro .intro__inner .intro__text {
@@ -393,7 +386,7 @@ svg * {
 
 .about {
   padding: var(--section-padding-y);
-  background: url("../images/backgrounds/01-about.png") 0 100%/12% no-repeat;
+  background: url("../assets/images/backgrounds/01-about.png") 0 100%/12% no-repeat;
 }
 @media (max-width: 991.98px) {
   .about {
@@ -471,6 +464,8 @@ svg * {
   text-align: center;
   padding: 50px 15px;
   min-height: 150px;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
   box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
   border-radius: 5px;
 }
@@ -507,7 +502,7 @@ svg * {
 
 .trainer {
   padding: var(--section-padding-y);
-  background: var(--color-accent) url("../images/backgrounds/02-trainer.png") 100% 100%/12% no-repeat;
+  background: var(--color-accent) url("../assets/images/backgrounds/02-trainer.png") 100% 100%/12% no-repeat;
 }
 @media (max-width: 991.98px) {
   .trainer {
@@ -558,8 +553,7 @@ svg * {
 .trainer .trainer__inner .trainer__photo img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .trainer .trainer__inner .trainer__text {
   color: var(--color-light);
@@ -590,6 +584,8 @@ svg * {
   display: block;
   width: 800px;
   height: 500px;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
   box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
@@ -607,7 +603,7 @@ svg * {
 
 .students {
   padding: var(--section-padding-y);
-  background: url("../images/backgrounds/03-students.png") 0% 100%/12% no-repeat;
+  background: url("../assets/images/backgrounds/03-students.png") 0% 100%/12% no-repeat;
 }
 @media (max-width: 991.98px) {
   .students {
@@ -654,7 +650,7 @@ svg * {
 
 .contacts {
   padding: var(--section-padding-y);
-  background: var(--color-accent) url("../images/backgrounds/04-contacts.png") 100% 100%/12% no-repeat;
+  background: var(--color-accent) url("../assets/images/backgrounds/04-contacts.png") 100% 100%/12% no-repeat;
 }
 @media (max-width: 991.98px) {
   .contacts {
@@ -694,7 +690,7 @@ svg * {
   margin-bottom: 15px;
 }
 .contacts .contacts__inner .contacts__info .contact__address > p::before {
-  content: url("../images/icons/contacts/location-icon.svg");
+  content: url("../assets/images/icons/contacts/location-icon.svg");
   display: inline-block;
   vertical-align: middle;
   padding-right: 5px;
@@ -724,7 +720,7 @@ svg * {
   color: var(--color-light);
 }
 .contacts .contacts__inner .contacts__info .contact__phone .phone__link .viber-icon::before {
-  content: url("../images/icons/contacts/viber-icon.svg");
+  content: url("../assets/images/icons/contacts/viber-icon.svg");
   display: inline-block;
   vertical-align: middle;
   padding-right: 5px;
@@ -737,7 +733,7 @@ svg * {
   }
 }
 .contacts .contacts__inner .contacts__info .contact__phone .phone__link .telegram-icon::before {
-  content: url("../images/icons/contacts/telegram-icon.svg");
+  content: url("../assets/images/icons/contacts/telegram-icon.svg");
   display: inline-block;
   vertical-align: middle;
   padding-right: 5px;
@@ -750,7 +746,7 @@ svg * {
   }
 }
 .contacts .contacts__inner .contacts__info .contact__phone > a::before {
-  content: url("../images/icons/contacts/phone-icon.svg");
+  content: url("../assets/images/icons/contacts/phone-icon.svg");
   display: inline-block;
   vertical-align: middle;
   padding-right: 5px;

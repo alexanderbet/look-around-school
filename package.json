@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "aos": "^2.3.4"
+  },
+  "devDependencies": {
+    "stylelint": "^16.23.1",
+    "stylelint-config-standard": "^39.0.0"
   }
 }
