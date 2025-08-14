@@ -1,3 +1,5 @@
+@import "../node_modules/swiper/swiper-bundle.css";
+@import "../node_modules/aos/dist/aos.css";
 @import "reset", "vars", "fonts", "globals", "mixins", "media", "utils";
 
 .header {
@@ -547,7 +549,7 @@
 
 .footer {
    padding: 15px 0;
-   color: #777777;
+   color: #555555;
 
    @include mobile-s {
       padding: 10px 0;
