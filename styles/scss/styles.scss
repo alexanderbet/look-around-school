@@ -1,0 +1,576 @@
+@import "reset", "vars", "fonts", "globals", "mixins", "media", "utils";
+
+.header {
+   width: 100%;
+   height: 90px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   backdrop-filter: blur(10px);
+   background-color: #1e293bcc;
+
+   @include tablets {
+      height: 70px;
+   }
+
+   .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo__image {
+         position: relative;
+         inset: 0;
+         z-index: 1;
+
+         @include tablets {
+            width: 100px;
+         }
+      }
+
+      .header__menu {
+         // overlay menu
+         @include mobile-s {
+            display: flex;
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            width: 100%;
+            min-height: 100vh;
+            overflow: auto;
+            background-color: var(--color-accent);
+            transition: transform 0.5s ease-in-out;
+
+            &._menu-open {
+               transform: translateY(100%);
+            }
+         }
+
+         .header__menu-list {
+            display: flex;
+            align-items: center;
+            column-gap: 40px;
+            flex-wrap: wrap;
+
+            @include mobile-s {
+               flex-direction: column;
+               margin: auto;
+               font-size: 32px;
+               padding-top: 50px;
+            }
+
+            @include tablets {
+               column-gap: 30px;
+            }
+
+            .header__menu-item {
+               .header__menu-link {
+                  display: inline-flex;
+                  padding: 15px 0;
+                  text-transform: uppercase;
+                  color: #a6abb3;
+
+                  &:hover {
+                     color: var(--color-light);
+                     transition: color 0.3s ease-in-out;
+                  }
+               }
+
+               ._active-link {
+                  color: var(--color-light);
+               }
+            }
+         }
+      }
+
+      @include tablets {
+         font-size: 14px;
+      }
+   }
+}
+
+.intro {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background: var(--color-accent) url("../../assets/images/bg-image.jpg") center / cover no-repeat;
+
+   @include mobile-xs {
+      background-position: 65%;
+   }
+
+   .intro__inner {
+      @include innerMaxWidth(880px, 0 auto);
+      text-align: center;
+
+      .intro__title {
+         font-family: var(--font-family-fluid);
+         text-transform: uppercase;
+         color: var(--color-light);
+         margin-bottom: 20px;
+         font-size: 90px;
+
+         @include tablets {
+            font-size: 76px;
+         }
+
+         @include mobile-xs {
+            font-size: 60px;
+         }
+      }
+
+      .intro__text {
+         color: var(--color-light);
+         font-weight: 700;
+         font-size: 42px;
+         -webkit-text-stroke: 1px #000000;
+         text-transform: uppercase;
+
+         @include tablets {
+            font-size: 32px;
+         }
+
+         @include mobile-s {
+            font-size: 24px;
+         }
+      }
+   }
+}
+
+.about {
+   padding: var(--section-padding-y);
+   background: url("../../assets/images/backgrounds/01-about.png") 0 100% / 12% no-repeat;
+
+   @include tablets {
+      background-image: none;
+   }
+
+   @include mobile-s {
+      padding-bottom: 0px;
+   }
+
+   .about__inner {
+      @include innerMaxWidth(880px, 0 auto);
+
+      .about__title {
+         margin-bottom: 35px;
+
+         @include tablets {
+            font-size: 24px;
+            margin-bottom: 25px;
+         }
+
+         @include mobile-s {
+            margin-bottom: 20px;
+         }
+      }
+
+      .about__text {
+         font-size: 18px;
+         margin-bottom: 25px;
+
+         @include mobile-s {
+            font-size: 16px;
+            margin-bottom: 15px;
+         }
+
+         & > p:not(:last-child) {
+            margin-bottom: 15px;
+
+            @include tablets {
+               margin-bottom: 10px;
+            }
+         }
+      }
+
+      .about__row {
+         display: flex;
+         flex-wrap: wrap;
+         margin: 0 -10px;
+
+         &:not(:last-child) {
+            margin-bottom: 25px;
+
+            @include mobile-s {
+               margin-bottom: 0;
+            }
+         }
+
+         .about__column {
+            width: 50%;
+            padding: 0 10px;
+
+            @include mobile-s {
+               width: 100%;
+               margin-bottom: 20px;
+            }
+
+            .about__card {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               text-align: center;
+               padding: 50px 15px;
+               min-height: 150px;
+               -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+               -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+               box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+               border-radius: 5px;
+
+               @include tablets {
+                  padding: 35px 10px;
+               }
+            }
+
+            .about__card-icon {
+               margin-bottom: 25px;
+
+               @include tablets {
+                  width: 48px;
+                  font-size: 10px;
+               }
+
+               @include tablets {
+                  margin-bottom: 15px;
+               }
+            }
+
+            .about__card-subtext {
+               font-size: 24px;
+
+               @include tablets {
+                  font-size: 18px;
+               }
+
+               & span {
+                  font-weight: 700;
+               }
+            }
+         }
+      }
+   }
+}
+
+.trainer {
+   padding: var(--section-padding-y);
+   background: var(--color-accent) url("../../assets/images/backgrounds/02-trainer.png") 100% 100% / 12% no-repeat;
+
+   @include tablets {
+      background-image: none;
+   }
+
+   @include mobile-s {
+      padding-bottom: 25px;
+   }
+
+   .trainer__inner {
+      @include innerMaxWidth(880px, 0 auto);
+
+      text-align: center;
+      font-size: 24px;
+
+      .trainer__title {
+         color: var(--color-light);
+         margin-bottom: 35px;
+
+         @include tablets {
+            font-size: 24px;
+            margin-bottom: 25px;
+         }
+
+         @include mobile-s {
+            margin-bottom: 20px;
+         }
+      }
+
+      .trainer__photo {
+         display: inline-block;
+         border-radius: 50%;
+         overflow: hidden;
+         width: 300px;
+         height: 300px;
+         margin-bottom: 25px;
+
+         @include tablets {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 15px;
+         }
+
+         & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+
+      .trainer__text {
+         color: var(--color-light);
+         margin-bottom: 25px;
+
+         @include tablets {
+            font-size: 18px;
+            margin-bottom: 20px;
+         }
+
+         @include mobile-s {
+            margin-bottom: 15px;
+         }
+
+         .trainer__name {
+            font-family: "Lacquer", system-ui;
+            margin-bottom: 15px;
+         }
+      }
+
+      .trainer__video {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+
+         .video__item {
+            display: block;
+            width: 800px;
+            height: 500px;
+            -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+
+            @include tablets {
+               width: 100%;
+               min-height: 100%;
+            }
+
+            @include mobile-xs {
+               height: 400px;
+            }
+         }
+      }
+   }
+}
+
+.students {
+   padding: var(--section-padding-y);
+   background: url("../../assets/images/backgrounds/03-students.png") 0% 100% / 12% no-repeat;
+
+   @include tablets {
+      background-image: none;
+      padding-bottom: 0;
+   }
+
+   .students__inner {
+      @include innerMaxWidth(880px, 0 auto);
+
+      .students__title {
+         margin-bottom: 35px;
+
+         @include tablets {
+            font-size: 24px;
+            margin-bottom: 25px;
+         }
+
+         @include mobile-s {
+            margin-bottom: 20px;
+         }
+      }
+
+      .students__text {
+         font-size: 18px;
+         margin-bottom: 25px;
+
+         @include tablets {
+            margin-bottom: 20px;
+         }
+
+         @include mobile-s {
+            font-size: 16px;
+            margin-bottom: 15px;
+         }
+
+         & > p:not(:last-child) {
+            margin-bottom: 10px;
+         }
+      }
+   }
+}
+
+.contacts {
+   padding: var(--section-padding-y);
+   background: var(--color-accent) url("../../assets/images/backgrounds/04-contacts.png") 100% 100% / 12% no-repeat;
+
+   @include tablets {
+      background-image: none;
+   }
+
+   .contacts__inner {
+      @include innerMaxWidth(880px, 0 auto);
+
+      .contacts__title {
+         color: var(--color-light);
+         margin-bottom: 35px;
+
+         @include tablets {
+            font-size: 24px;
+            margin-bottom: 25px;
+         }
+
+         @include mobile-s {
+            margin-bottom: 20px;
+         }
+      }
+
+      .contacts__info {
+         color: var(--color-light);
+         font-size: 18px;
+         text-align: center;
+
+         @include mobile-s {
+            font-size: 16px;
+         }
+
+         .contact__address {
+            margin-bottom: 15px;
+
+            & > p::before {
+               content: url("../../assets/images/icons/contacts/location-icon.svg");
+               display: inline-block;
+               vertical-align: middle;
+               padding-right: 5px;
+               height: auto;
+               width: 20px;
+
+               @include mobile-s {
+                  width: 16px;
+               }
+            }
+         }
+         .contact__phone {
+            margin-bottom: 15px;
+
+            @include mobile-s {
+               margin-bottom: 10px;
+            }
+
+            @media (max-width: 320px) {
+               max-width: 240px;
+               margin: 0 auto 15px;
+            }
+
+            .phone__link {
+               color: var(--color-light);
+
+               .viber-icon::before {
+                  content: url("../../assets/images/icons/contacts/viber-icon.svg");
+                  display: inline-block;
+                  vertical-align: middle;
+                  padding-right: 5px;
+                  height: auto;
+                  width: 25px;
+
+                  @include mobile-s {
+                     width: 20px;
+                  }
+               }
+
+               .telegram-icon::before {
+                  content: url("../../assets/images/icons/contacts/telegram-icon.svg");
+                  display: inline-block;
+                  vertical-align: middle;
+                  padding-right: 5px;
+                  height: auto;
+                  width: 22px;
+
+                  @include mobile-s {
+                     width: 18px;
+                  }
+               }
+            }
+
+            & > a::before {
+               content: url("../../assets/images/icons/contacts/phone-icon.svg");
+               display: inline-block;
+               vertical-align: middle;
+               padding-right: 5px;
+               height: auto;
+               width: 20px;
+
+               @include mobile-s {
+                  width: 16px;
+               }
+            }
+         }
+
+         .social__media {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .social__media-item {
+               margin: 0 15px;
+
+               @include tablets {
+                  margin: 0 10px;
+               }
+
+               @include mobile-s {
+                  margin: 0 5px;
+               }
+
+               .social__media-link {
+                  display: block;
+                  padding: 10px 13px;
+                  border-radius: 10px;
+
+                  @include hover {
+                     &:hover {
+                        background-color: #638edd44;
+                        transition: 0.3s ease-in-out;
+                     }
+                  }
+
+                  .social__media-icon {
+                     @include mobile-s {
+                        width: 30px;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+.footer {
+   padding: 15px 0;
+   color: #555555;
+
+   @include mobile-s {
+      padding: 10px 0;
+   }
+
+   .footer__inner {
+      @include innerMaxWidth(880px, 0 auto);
+
+      .footer__text {
+         text-align: center;
+         font-size: 16px;
+
+         @include mobile-s {
+            font-size: 14px;
+         }
+
+         & a {
+            color: var(--color-dark);
+         }
+
+         & span {
+            font-weight: 700;
+         }
+      }
+   }
+}

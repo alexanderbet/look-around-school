@@ -1,0 +1,26 @@
+html {
+   height: 100%;
+   scroll-behavior: smooth;
+   scroll-padding-top: 90px;
+}
+
+body {
+   height: 100%;
+   font-family: var(--font-family-base);
+   font-weight: 400;
+   line-height: 1.28;
+   color: var(--color-dark);
+   background-color: var(--color-light);
+
+   &._scroll-hidden {
+      overflow: hidden;
+   }
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+   transition-duration: 0.3;
+}
