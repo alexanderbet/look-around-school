@@ -1,0 +1,36 @@
+$tablets: 991.98px;
+$mobile-s: 767.98px;
+$mobile-xs: 575.98px;
+
+@mixin tablets {
+   @media (max-width: $tablets) {
+      @content;
+   }
+}
+
+@mixin mobile-s {
+   @media (max-width: $mobile-s) {
+      @content;
+   }
+}
+
+@mixin mobile-xs {
+   @media (max-width: $mobile-xs) {
+      @content;
+   }
+}
+
+//resolves problem with hover effect on touch screen devices
+@mixin hover {
+   @media (hover: hover) {
+      &:hover {
+         @content;
+      }
+   }
+
+   @media (hover: none) {
+      &:active {
+         @content;
+      }
+   }
+}

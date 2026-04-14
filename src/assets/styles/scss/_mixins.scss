@@ -1,0 +1,17 @@
+@mixin innerMaxWidth($mw, $auto) {
+   max-width: ($mw);
+   margin: ($auto);
+}
+
+%link-active-underline {
+   &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 7px;
+      height: 2px;
+      left: 0;
+      width: 100%;
+      background-color: var(--color-light);
+   }
+}

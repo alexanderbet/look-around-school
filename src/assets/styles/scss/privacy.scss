@@ -1,0 +1,65 @@
+@import "normalize", "variables", "fonts", "globals", "mixins", "media", "utils";
+
+.privacy {
+   padding-top: 110px;
+   font-size: 18px;
+   font-family: var(--font-family-base);
+
+   @include tablets {
+      padding-top: 80px;
+      font-size: 16px;
+   }
+
+   .privacy__inner {
+      @include innerMaxWidth(880px, 0 auto);
+
+      border-bottom: 1px solid #aaaaaa;
+      padding-top: 15px;
+
+      @include mobile-s {
+         padding-top: 10px;
+      }
+
+      .privacy__inner-title {
+         font-size: 24px;
+         font-weight: 600;
+         margin-bottom: 15px;
+
+         @include tablets {
+            font-size: 20px;
+            margin-bottom: 10px;
+         }
+
+         @include mobile-xs {
+            font-size: 18px;
+            max-width: 290px;
+         }
+      }
+
+      .privacy__text {
+         margin-bottom: 10px;
+
+         .privacy__list {
+            .privacy__list-item {
+               padding-left: 20px;
+
+               @include mobile-xs {
+                  padding-left: 15px;
+               }
+            }
+         }
+      }
+
+      .privacy__note {
+         margin-bottom: 15px;
+
+         @include mobile-s {
+            margin-bottom: 10px;
+         }
+      }
+   }
+
+   & a:hover {
+      text-decoration: underline;
+   }
+}

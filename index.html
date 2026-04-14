@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <meta name="description" content="Профессиональное обучение брейк-дансу для взрослых и детей от 4 лет под руководством опытного тренера.">
+   <meta property="og:type" content="website" />
+   <meta property="og:url" content="https://lookaround.by">
+   <meta property="og:title" content="Look Around School – Школа брейк-данса в Гомеле." />
+   <meta property="og:description" content="Профессиональное обучение брейк-дансу для взрослых и детей от 4 лет под руководством опытного тренера." />
+   <meta property="og:image" content="./src/assets/images/og-poster.jpg" />
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" sizes="32x32" />
+   <link rel="apple-touch-icon" href="./src/assets/icons/favicon/apple-touch-icon.png" type="image/png"
+      sizes="180x180" />
+   <link rel="stylesheet" href="./src/assets/styles/css/styles.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <title>Look Around School – Школа брейк-данса в Гомеле</title>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="./src/assets/scripts/index.js" type="module"></script>
+   <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+</head>
+
+<body>
+   <div class="wrapper" id="wrapper">
+      <header class="header">
+         <div class="header__inner container">
+            <div class="header__logo">
+               <a href="#main" aria-label="Home">
+                  <img 
+                     src="./src/assets/icons/logo.svg" 
+                     alt="logo" 
+                     class="logo__image" 
+                     width="128" 
+                     height="90"
+                  />
+               </a>
+            </div>
+
+            <nav class="header__menu">
+               <ul class="header__menu-list">
+                  <li class="header__menu-item">
+                     <a href="#main" class="header__menu-link">Главная</a>
+                  </li>
+                  <li class="header__menu-item">
+                     <a href="#about" class="header__menu-link">О школе</a>
+                  </li>
+                  <li class="header__menu-item">
+                     <a href="#trainer" class="header__menu-link">Тренер</a>
+                  </li>
+                  <li class="header__menu-item">
+                     <a href="#students" class="header__menu-link">Наши ученики</a>
+                  </li>
+                  <li class="header__menu-item">
+                     <a href="#contacts" class="header__menu-link">Контакты</a>
+                  </li>
+               </ul>
+            </nav>
+            <button 
+                  class="burger-btn" 
+                  type="button" 
+                  aria-label="Открыть и закрыть мобильное меню" 
+            >
+               <span></span>
+               <span></span>
+               <span></span>
+            </button>
+         </div>
+      </header>
+      <main>
+         <section class="main" id="main">
+            <div class="main__inner container">
+               <h1 
+                  class="main__title"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+               >
+                  Look Around <br />School
+               </h1>
+               <h2 
+                  class="main__text"
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+               >
+                  Школа брейк-данса <br />в Гомеле
+               </h2>
+            </div>
+         </section>
+         <section class="about" id="about">
+            <div class="about__inner container">
+               <h2 
+                  class="about__title title" 
+                  data-aos="fade-up" 
+                  data-aos-duration="1000"
+               >
+                  О школе
+               </h2>
+               <div 
+                  class="about__text" 
+                  data-aos="fade-up" 
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-duration="1500"
+               >
+                  <p>
+                     <strong>Look Around School</strong> – единственная в своем роде
+                     профессиональная брейк-данс школа в Гомеле, основанная в 2014
+                     году на базе команды Look Around Crew.
+                  </p>
+                  <p>
+                     Look Around School – это место, где дети находят своё хобби или
+                     своё призвание, где раскрываются их таланты.
+                     <br />Место, где дети отвлекаются от компьютерных игр и
+                     проникаются хип-хоп культурой и культурой здорового образа
+                     жизни. <br />Место, откуда дети начинают свое покорение мировой
+                     арены.
+                  </p>
+                  <p>
+                     Задача нашей школы сделать доступным брейк-данс для начинающих,
+                     направить природные способности детей для достижения
+                     максимальных результатов и просто для удовольствия.
+                  </p>
+               </div>
+               <div class="about__row">
+                  <div 
+                     class="about__column" 
+                     data-aos="flip-left" 
+                     data-aos-duration="1500"
+                  >
+                     <div class="about__card">
+                        <img 
+                           src="./src/assets/icons/about/school.svg" 
+                           class="about__card-icon" 
+                           alt="иконка школы" 
+                           width="60" 
+                           height="48" 
+                           loading="lazy"
+                        />
+                        <div class="about__card-subtext">
+                           <p>Обучаем <span>более 10 лет</span></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div 
+                     class="about__column" 
+                     data-aos="flip-left" 
+                     data-aos-duration="1500"
+                  >
+                     <div class="about__card">
+                        <img 
+                           src="./src/assets/icons/about/child.svg" 
+                           class="about__card-icon"
+                           alt="иконка ребенка" 
+                           width="60" 
+                           height="48" 
+                           loading="lazy"
+                        />
+                        <div class="about__card-subtext">
+                           <p>Обучаем детей <span>от 4 лет</span></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="about__row">
+                  <div 
+                     class="about__column" 
+                     data-aos="flip-left" 
+                     data-aos-duration="1500"
+                  >
+                     <div class="about__card">
+                        <img 
+                           src="./src/assets/icons/about/children.svg" 
+                           class="about__card-icon" 
+                           alt="иконка девочки и мальчика" 
+                           width="60" 
+                           height="48" 
+                           loading="lazy"
+                        />
+                        <div class="about__card-subtext">
+                           <p>Обучаем <span>девочек и мальчиков</span></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div 
+                     class="about__column" 
+                     data-aos="flip-left" 
+                     data-aos-duration="1500"
+                  >
+                     <div class="about__card">
+                        <img 
+                           src="./src/assets/icons/about/support.svg" 
+                           class="about__card-icon" 
+                           alt="иконка с рукопожатием" 
+                           width="60" 
+                           height="48" 
+                           loading="lazy"
+                        />
+                        <div class="about__card-subtext">
+                           <p><span>Поддержка</span> от тренера и команды</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="about__row">
+                  <div 
+                     class="about__column" 
+                     data-aos="flip-left" 
+                     data-aos-duration="1500"
+                  >
+                     <div class="about__card">
+                        <img 
+                           src="./src/assets/icons/about/person.svg" 
+                           class="about__card-icon"
+                           alt="иконка человека с часами" 
+                           width="60" 
+                           height="48" 
+                           loading="lazy"
+                        />
+                        <div class="about__card-subtext">
+                           <p><span>Индивидуальный</span> подход</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div 
+                     class="about__column" 
+                     data-aos="flip-left" 
+                     data-aos-duration="1500"
+                  >
+                     <div class="about__card">
+                        <img 
+                           src="./src/assets/icons/about/star.svg" 
+                           class="about__card-icon"
+                           alt="иконка пьедестала " 
+                           width="60" 
+                           height="48" 
+                           loading="lazy"
+                        />
+                        <div class="about__card-subtext">
+                           <p><span>Участие</span> в чемпионатах</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="trainer" id="trainer">
+            <div class="trainer__inner container">
+               <h2 
+                  class="trainer__title title" 
+                  data-aos="fade-up" 
+                  data-aos-duration="1000"
+               >
+                  Тренер
+               </h2>
+               <div 
+                  class="trainer__photo" 
+                  data-aos="zoom-in" 
+                  data-aos-duration="1500"
+               >
+                  <img 
+                     src="./src/assets/images/trainer/sergey-randy-trainer.jpeg" 
+                     alt="аватар тренера" 
+                     width="300" 
+                     height="200"
+                     loading="lazy" 
+                  />
+               </div>
+               <div 
+                  class="trainer__text" 
+                  data-aos="fade-right" 
+                  data-aos-duration="1500"
+               >
+                  <div class="trainer__name">
+                     <p>Сергей Новиков</p>
+                     <p>(B-Boy Randy)</p>
+                  </div>
+                  <div class="trainer__subtext">
+                     <p>Опыт в брейкинге более 20 лет.</p>
+                     <p>
+                        Судья и участник многих республиканских и международных
+                        чемпионатов.
+                     </p>
+                  </div>
+               </div>
+               <div 
+                  class="trainer__video" 
+                  data-aos="fade-up" 
+                  data-aos-duration="1500"
+               >
+                  <video 
+                        class="video__item"
+                        controls 
+                        preload="metadata" 
+                        poster="./src/assets/images/video-poster.png" 
+                  >
+                        <source src="./src/assets/videos/B-boy-Randy.webm" type="video/webm" />
+                        <source src="./src/assets/videos/B-boy-Randy.mp4" type="video/mp4" />
+                  </video>
+               </div>
+            </div>
+         </section>
+         <section class="students" id="students">
+            <div class="students__inner container">
+               <h2 
+                  class="students__title title" 
+                  data-aos="fade-up" 
+                  data-aos-duration="1000"
+               >
+                  Наши ученики
+               </h2>
+               <div 
+                  class="students__text" 
+                  data-aos="fade-up" 
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-duration="1500"
+               >
+                  <p>
+                     Ученики нашей школы регулярно выезжают на региональные и
+                     республиканские брейк-данс фестивали и, что особенно приятно,
+                     привозят награды в разных номинациях.
+                  </p>
+                  <p>
+                     Наша узкоспециализированная школа – это дружный коллектив, в
+                     котором дети находят себе друзей, как среди учеников, так и
+                     среди преподавателей.
+                  </p>
+                  <p>
+                     Мы внимательны к каждому члену нашей большой семьи и
+                     обеспечиваем индивидуальный подход к ученикам во время
+                     тренировочного процесса и за его пределами.
+                  </p>
+               </div>
+            </div>
+            <div 
+               class="swiper" 
+               data-aos="fade-up" 
+               data-aos-duration="1500"
+            >
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <img 
+                        src="./src/assets/images/students/01.jpg" 
+                        alt="девочка стоит на голове" 
+                        width="800" 
+                        height="500" 
+                        loading="lazy" 
+                     />
+                  </div>
+                  <div class="swiper-slide">
+                     <img 
+                        src="./src/assets/images/students/02.jpg" 
+                        alt="команда молодых ребят радуется победе" 
+                        width="800" 
+                        height="500" 
+                        loading="lazy" 
+                     />
+                  </div>
+                  <div class="swiper-slide">
+                     <img 
+                        src="./src/assets/images/students/03.jpg" 
+                        alt="команда радуется второму месту на чемпионате" 
+                        width="800" 
+                        height="500" 
+                        loading="lazy" 
+                     />
+                  </div>
+                  <div class="swiper-slide">
+                     <img 
+                        src="./src/assets/images/students/04.jpg" 
+                        alt="команда поддерживает своего танцора" 
+                        width="800" 
+                        height="500" 
+                        loading="lazy" 
+                     />
+                  </div>
+                  <div class="swiper-slide">
+                     <img 
+                        src="./src/assets/images/students/05.jpg" 
+                        alt="команда молодых ребят фотографируется со своим тренером" 
+                        width="800" 
+                        height="500" 
+                        loading="lazy" 
+                     />
+                  </div>
+                  <div class="swiper-slide">
+                     <img 
+                        src="./src/assets/images/students/06.jpg" 
+                        alt="команда фотографируется с призами" 
+                        width="800" 
+                        height="500" 
+                        loading="lazy" 
+                     />
+                  </div>
+                  <div class="swiper-slide">
+                     <img 
+                        src="./src/assets/images/students/07.jpg" 
+                        alt="команда выступает со своим номером" 
+                        width="800" 
+                        height="500" 
+                        loading="lazy" 
+                     />
+                  </div>
+                  <div class="swiper-slide">
+                     <img 
+                        src="./src/assets/images/students/08.jpg" 
+                        alt="команда молодых ребят радуется победе вместе с тренерами" 
+                        width="800" 
+                        height="500" 
+                        loading="lazy" 
+                     />
+                  </div>
+                  <div class="swiper-slide">
+                     <img 
+                        src="./src/assets/images/students/09.jpg" 
+                        alt="победное селфи команды молодых ребят со своим тренером" 
+                        width="800" 
+                        height="500" 
+                        loading="lazy" 
+                     />
+                  </div>
+               </div>
+               <div class="swiper-pagination"></div>
+               <div class="swiper-button-prev"></div>
+               <div class="swiper-button-next"></div>
+            </div>
+         </section>
+         <section class="contacts" id="contacts">
+            <div class="contacts__inner container">
+               <h2 
+                  class="contacts__title title" 
+                  data-aos="fade-up" 
+                  data-aos-duration="1000"
+               >
+                  Контакты
+               </h2>
+               <div 
+                  class="contacts__info" 
+                  data-aos="fade-up" 
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-duration="1500"
+               >
+                  <address class="contact__address">
+                     <p>
+                        г. Гомель, ул. Ирининская 16, ГЦК (Городской центр культуры)
+                     </p>
+                  </address>
+                  <div class="contact__phone">
+                     <a 
+                        class="phone__link" 
+                        href="tel:+375257370635"
+                     >
+                        + 375 (25) 737–06–35 
+                        (<span
+                           class="viber-icon">
+                              Viber
+                        </span>,
+                        <span class="telegram-icon">Telegram</span>)
+                     </a>
+                  </div>
+                  <ul class="social__media">
+                     <li class="social__media-item">
+                        <a 
+                           href="mailto:lookaroundschool1@gmail.com" 
+                           class="social__media-link"
+                        >
+                           <img 
+                              src="./src/assets/icons/contacts/google-icon.svg" 
+                              alt="иконка гугл"
+                              class="social__media-icon"
+                              width="35"
+                              height="35"
+                              loading="lazy" 
+                           />
+                        </a>
+                     </li>
+                     <li class="social__media-item">
+                        <a 
+                           href="https://www.instagram.com/lookaround_school/?igsh=bXJ1bW53bHM0YXR3" 
+                           target="_blank"
+                           class="social__media-link"
+                        >
+                           <img 
+                              src="./src/assets/icons/contacts/instagram-icon.svg" 
+                              alt="иконка инстаграм"
+                              class="social__media-icon" 
+                              width="35"
+                              height="35"
+                              loading="lazy" 
+                           />
+                        </a>
+                     </li>
+                     <li class="social__media-item">
+                        <a 
+                           href="https://vk.com/lookaroundcrewofficialpage" 
+                           target="_blank" 
+                           class="social__media-link"
+                        >
+                           <img 
+                              src="./src/assets/icons/contacts/vk-icon.svg" 
+                              alt="иконка вконтакте" 
+                              class="social__media-icon"
+                              width="35"
+                              height="35"
+                              loading="lazy" 
+                           />
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer class="footer">
+         <div class="footer__inner container">
+            <div class="footer__text">
+               <p class="footer__copyright">
+                  © 2026. Все права защищены.
+               </p>
+               <p class="footer__made-by">
+                  Разработка сайта:
+                  <a href="mailto:ibetram12@gmail.com">
+                     <span>Alexander Bet</span>
+                  </a>
+               </p>
+               <p class="footer__privacy">
+                  <a href="privacy.html" class="footer__privacy-policy">
+                     Политика конфиденциальности
+                  </a>
+               </p>
+            </div>
+         </div>
+      </footer>
+      <div class="cookie">
+         <div class="cookie__inner container">
+            <div class="cookie__info">
+               <p class="cookie__text">
+                  «Мы используем файлы cookie, чтобы обеспечить вам максимальное удобство использования нашего сайта. Оставаясь на сайте, вы соглашаетесь с использованием файлов cookie, а также с <a href="privacy.html" class="cookie__privacy-policy"><span>Политикой конфиденциальности</span></a>».
+               </p>
+               <button class="cookie-btn">Oк</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>
