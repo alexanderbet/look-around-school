@@ -6,7 +6,7 @@ const bodyElement = document.body
 if (burgerMenuButtonElement) {
    burgerMenuButtonElement.addEventListener('click', burgerMenuActive)
 
-   menuLinkElements.forEach((link) => {
+   menuLinkElements.forEach(link => {
       link.addEventListener('click', removeBurgerMenu)
    })
 }

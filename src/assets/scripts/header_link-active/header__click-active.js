@@ -2,7 +2,7 @@ const headerLinkElements = document.querySelectorAll('.header__menu-link')
 
 headerLinkElements.forEach(link => {
    link.addEventListener('click', () => {
-      headerLinkElements.forEach((link) => {
+      headerLinkElements.forEach(link => {
          link.classList.remove('_active-link')
       })
 
@@ -23,7 +23,7 @@ headerLinkElements.forEach(link => {
             history.replaceState(null, document.title, window.location.pathname + window.location.search)
          }
       }
-   });
+   })
 })
 
 export { headerLinkElements }
